@@ -1,0 +1,131 @@
+<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<link rel="stylesheet" href="Style.css">-->
+    <style>
+      .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+th,td {
+    border: 1px solid black;
+    padding: 10px;
+}
+#data {
+    margin-bottom: 10px;
+}
+#data input, button {
+    padding: 10px;
+    width: 90px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="data">
+            <!-- <input type="number" id="Sl no." placeholder=+1> -->
+            <input type="text" id="FirstName" placeholder="Enter FirstName">
+            <input type="text" id="LastName" placeholder="Enter LastName">
+            <input type="number" id="age" placeholder="Enter Age">
+            <input type="text" id="occupation" placeholder="Enter Occupation">
+            <input type="text" id="city" placeholder="Enter City">
+            <input type="text" id="country" placeholder="Enter Country">
+            <button type="button" onclick="addRow()">Click to add row </button>
+        </div>
+    <h2>Table</h2>
+    <table id="my-table">
+    <thead>
+       
+        <tr>
+        <th>Sl no.</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>age</th>
+        <th>Occupation</th>
+        <th>City</th>
+        <th>Country</th>
+    </tr>
+    </thead>
+    <tbody>
+       
+<tr> 
+       <td>1</td>
+        <td>Mayank</td>
+        <td>Mishra</td>
+        <td>20</td>
+        <td>Programmer</td>
+        <td>Ranchi</td>
+        <td>India</td>
+    </tr>
+
+        <tr>
+        <td>2</td>
+        <td>Amit</td>
+        <td>kumar</td>
+        <td>25</td>
+        <td>lawyer</td>
+        <td>Patna</td>
+        <td>India</td>
+</tr>
+
+<tr>
+        <td>3</td>
+        <td>Prashant</td>
+        <td>kumar</td>
+        <td>32</td>
+        <td>Chef</td>
+        <td>Bhopal</td>
+        <td>India</td>
+
+        <tr>
+             <td>4</td>
+            <td>Shivam</td>
+            <td>Singh</td>
+            <td>36</td>
+            <td>Farmer</td>
+            <td>Mumbai</td>
+            <td>India</td>
+        </tr>
+
+            <tr>
+            <td>5</td>
+            <td>Rakesh</td>
+            <td>Kumar</td>
+            <td>39</td>
+            <td>Doctor</td>
+            <td>Delhi</td>
+            <td>India</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+ <script>  document.getElementById("button").onclick = 
+    function() {        
+        var str = document.getElementById("string").value.toLowerCase();
+        console.log("The string you entered: ", str)
+        var letter = document.getElementById("letter").value.toLowerCase();
+        console.log("The letter you entered: ", letter)
+
+        var letterCheck = str.includes(letter)
+        var letterCeck = str.indexOf(letter) !== -1
+        if(str.indexOf(letter) == -1) {
+            alert("Letter does not exist in the string")
+        }
+        else {
+            var afterLetter = str.substring(str.indexOf(letter)+1);
+            console.log("Substring:",afterLetter)
+        }
+    }
+    </script>
+</body>
+
+</html>
